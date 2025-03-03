@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Mapa Mental de Requisições</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="toolbar">
+    <button id="export-json">Exportar JSON</button>
+    <button id="export-jpg">Exportar JPG</button>
+    <button id="refresh-map">Atualizar Mapa</button>
+    <button id="settings-btn">Configurações</button>
+  </div>
+
+  <div id="mindmap-container">
+    <svg id="mindmap-lines"></svg>
+  </div>
+
+  <div id="details">Clique nó "i" para ver detalhes.</div>
+
+  <div id="floating-details" class="hidden">
+    <div class="floating-content">
+      <button id="close-floating">Fechar</button>
+      <pre id="full-request-content"></pre>
+    </div>
+  </div>
+
+  <!-- Div para configurações de cor -->
+  <div id="settings-panel" class="hidden">
+    <div class="settings-content">
+      <h3>Preferências de Cor</h3>
+      <div id="color-settings">
+      </div>
+      <button id="save-settings">Salvar</button>
+      <button id="cancel-settings">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="html2canvas.min.js"></script>
+  <script src="mindmap.js"></script>
+</body>
+</html>

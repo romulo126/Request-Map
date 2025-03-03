@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Monitor de Requisições</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+    }
+
+    .popup-container {
+      width: 300px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .info {
+      margin-bottom: 15px;
+    }
+
+    .info strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #3498db;
+      font-size: 14px;
+    }
+
+    #tab-url {
+      font-size: 13px;
+      color: #555;
+      word-wrap: break-word;
+    }
+
+    #status {
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    #status.desativado {
+      color: #e74c3c;
+    }
+
+    #status.ativado {
+      color: #129700;
+    }
+
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #3498db;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+    <div class="info">
+      <strong>URL da Aba Ativa:</strong>
+      <div id="tab-url">Carregando...</div>
+    </div>
+    <div class="info">
+      <strong>Status:</strong>
+      <span id="status" class="desativado">Desligado</span>
+    </div>
+    <div class="btn-container">
+      <button id="toggle-capture">Ativar</button>
+      <button id="open-map">Abrir Mapas</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Request MindMap",
+  "version": "1.0",
+  "description": "Extensão que monitora requisições HTTP/WS na aba ativa e gera um mapa mental customizado com personalização de cores e exportação.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "webRequest",
+    "webRequestBlocking"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "48": "img/icon.jpg",
+    "128": "img/icon.jpg"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Monitor de Requisições",
+    "default_icon": {
+        "16": "img/icon.jpg",
+        "48": "img/icon.jpg",
+        "128": "img/icon.jpg"
+    }
+  }
+}
